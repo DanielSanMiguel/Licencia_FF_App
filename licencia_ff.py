@@ -48,8 +48,7 @@ if contrasena == contrasena_correcta:
         base_id = 'appFezarrh9fv6WrS'
         table_name = 'List_licencias'
         url_at = 'https://api.airtable.com/v0/appFezarrh9fv6WrS/List_licencias'
-        data_at = {"records": [{"fields": {
-            'Nombre':nombre, 'Club':club, 'Puesto':puesto, 'Email':email}}]}
+        
         headers_at = {"Authorization" : f"Bearer {api_key}",  "Content-Type" : 'application/json' }
         # Botón para enviar la solicitud
         if validar_correo(email) and nombre and club and puesto and email and nombre_licencia:
@@ -69,13 +68,15 @@ if contrasena == contrasena_correcta:
                 json.dumps(data)
                 # Realizar la solicitud POST
                 try:
-                    response_at = requests.post(url_at, json.dumps(data_at), headers=headers_at)
+                    
                     response = requests.post(url, data=data, headers=headers)
             
                     # Mostrar los resultados
                     st.subheader("Resultado de la solicitud:")
                     st.code(f"Código de estado: {response.status_code}")
-                    
+                    data_at = {"records": [{"fields": {
+                        'Nombre':nombre, 'Club':club, 'Puesto':puesto, 'Email':email, 'Licencia': response.json()['newLicense']}}]}
+                    response_at = requests.post(url_at, json.dumps(data_at), headers=headers_at)
                     # Mostrar la respuesta en formato JSON si es posible
                     try:
                         st.write(response.json())
