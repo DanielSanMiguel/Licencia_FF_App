@@ -25,8 +25,8 @@ if contrasena == contrasena_correcta:
         url = " https://flyfut.olocip.com/licenses/create"
         
         # Campos de entrada para el cuerpo de la solicitud
-        st.header("Cuerpo de la solicitud (JSON)")
-        nombre = st.text_input("Nombre", "Juan")
+        
+        nombre = st.text_input("Nombre", "Introduzca su nombre")
         
         # Botón para enviar la solicitud
         if st.button("Enviar solicitud"):
