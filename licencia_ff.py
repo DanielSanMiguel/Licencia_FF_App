@@ -39,7 +39,7 @@ if contrasena == contrasena_correcta:
             headers = {
                 'Content-Type': 'application/x-www-form-urlencoded',
                 'admin_name': 'flyfut',
-                'admin_password': '6tBscn5iTkdwwacD5SG7'
+                'admin_password': admin_password
                 
             }
             json.dumps(data)
