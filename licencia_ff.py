@@ -8,6 +8,15 @@ Created on Fri Sep  6 13:42:28 2024
 import streamlit as st
 import requests
 import json
+import re
+
+def validar_correo(email):
+    # Expresión regular para correos electrónicos
+    patron = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
+    if re.match(patron, email):
+        return True
+    else:
+        return False
 
 pag = st.empty()
 contrasena_correcta = st.secrets['contrasena_correcta']
@@ -43,7 +52,7 @@ if contrasena == contrasena_correcta:
             'Nombre':nombre, 'Club':club, 'Puesto':puesto, 'Email':email}}]}
         headers_at = {"Authorization" : f"Bearer {api_key}",  "Content-Type" : 'application/json' }
         # Botón para enviar la solicitud
-        if nombre and club and puesto and email and nombre_licencia:
+        if validar_correo(email) and nombre and club and puesto and email and nombre_licencia:
             if st.button("Solicitar 7 días de prueba"):
                 # Cuerpo de la solicitud en formato JSON
                 data = {
