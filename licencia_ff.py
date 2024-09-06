@@ -26,7 +26,7 @@ if contrasena == contrasena_correcta:
         
         # Campos de entrada para el cuerpo de la solicitud
         
-        nombre = st.text_input("Nombre", "Introduzca su nombre")
+        nombre = st.text_input("Nombre", "")
         
         # Botón para enviar la solicitud
         if st.button("Enviar solicitud"):
