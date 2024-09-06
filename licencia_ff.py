@@ -60,7 +60,7 @@ if contrasena == contrasena_correcta:
                 json.dumps(data)
                 # Realizar la solicitud POST
                 try:
-                    response_at = requests.post(url_at, data=data_at, headers=headers_at)
+                    response_at = requests.post(url_at, json.dumps(data_at), headers=headers_at)
                     response = requests.post(url, data=data, headers=headers)
             
                     # Mostrar los resultados
