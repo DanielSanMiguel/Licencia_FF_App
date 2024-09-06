@@ -74,5 +74,5 @@ if contrasena == contrasena_correcta:
                         st.write(response.text)
                 except requests.exceptions.RequestException as e:
                     st.error(f"Error al enviar la solicitud: {e}")
-            else:
-                st.warning("Por favor, rellena todos los campos para habilitar el botón de envío.")
+        else:
+            st.warning("Por favor, rellena todos los campos para habilitar el botón de envío.")
