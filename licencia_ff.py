@@ -28,6 +28,11 @@ page_bg_css = """
 """
 custom_css = """
 <style>
+div[data-baseweb="input"] {
+    background-color: #848282;
+    margin: none;
+    border: none;
+    }
 div[data-baseweb="base-input"] {
     background-color: #848282;
     margin: none;
