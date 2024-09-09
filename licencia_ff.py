@@ -29,8 +29,10 @@ page_bg_css = """
 custom_css = """
 <style>
 div[data-baseweb="input"] {
-
-    background-color: #c7c7c7;  /* Fondo color  */
+    border-bottom-right-radius: 0rem;
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+    border-top-left-radius: 0rem;
     }
 div[data-baseweb="base-input"] input {
     background-color: #c7c7c7;  /* Fondo color  */
