@@ -9,6 +9,8 @@ import streamlit as st
 import requests
 import json
 import re
+from PIL import Image
+from io import BytesIO
 
 def validar_correo(email):
     # Expresión regular para correos electrónicos
@@ -82,6 +84,15 @@ st.markdown(custom_css, unsafe_allow_html=True)
 st.markdown(button_css, unsafe_allow_html=True)
 st.markdown(mkContainer, unsafe_allow_html=True)
 
+url_imagen_github_1 = "https://raw.githubusercontent.com/DanielSanMiguel/Licencia_FF_App/main/logo.jpg"
+token_github = st.secrets['github_token']
+headers = {
+    "Authorization": f"token {token_github}"
+    }
+response_1 = requests.get(url_imagen_github_1, headers=headers)
+imagen_bytes_1 = BytesIO(response_1.content)
+logo_FF = Image.open(imagen_bytes_1)
+
 pag = st.empty()
 contrasena_correcta = st.secrets['contrasena_correcta']
 pag.title("Aplicación Protegida con Contraseña")
@@ -91,29 +102,33 @@ if contrasena == contrasena_correcta:
     pag.empty()
     with pag.container():
         admin_password = st.secrets['admin_password']
-        # Título de la aplicación
-        st.title("Licencia App Fly-Fut")
-        
-        # Entrada para la URL
-        url = " https://flyfut.olocip.com/licenses/create"
-        
-        # Datos del usuario
-        nombre = st.text_input("Nombre y Apellidos", "")
-        club = st.text_input("Club", "")
-        puesto = st.text_input("Puesto/Cargo", "")
-        email = st.text_input("E-mail", "")
-        
-        # Campos de entrada para el cuerpo de la solicitud
-        
-        nombre_licencia = st.text_input("Nombre licencia (Ejemplo: Juan1)", "")
-        
-        # Datos y credenciales AT
-        api_key = st.secrets['at_token']
-        base_id = 'appjPY2KlFg6bpcT1'
-        table_name = 'List_licencias'
-        url_at = 'https://api.airtable.com/v0/appjPY2KlFg6bpcT1/List_licencias'
-        
-        headers_at = {"Authorization" : f"Bearer {api_key}",  "Content-Type" : 'application/json' }
+        col_a, col_b = st.columns(2)
+        with col_a:
+            # Título de la aplicación
+            st.title("Licencia App Fly-Fut")
+            
+            # Entrada para la URL
+            url = " https://flyfut.olocip.com/licenses/create"
+            
+            # Datos del usuario
+            nombre = st.text_input("Nombre y Apellidos", "")
+            club = st.text_input("Club", "")
+            puesto = st.text_input("Puesto/Cargo", "")
+            email = st.text_input("E-mail", "")
+            
+            # Campos de entrada para el cuerpo de la solicitud
+            
+            nombre_licencia = st.text_input("Nombre licencia (Ejemplo: Juan1)", "")
+            
+            # Datos y credenciales AT
+            api_key = st.secrets['at_token']
+            base_id = 'appjPY2KlFg6bpcT1'
+            table_name = 'List_licencias'
+            url_at = 'https://api.airtable.com/v0/appjPY2KlFg6bpcT1/List_licencias'
+            
+            headers_at = {"Authorization" : f"Bearer {api_key}",  "Content-Type" : 'application/json' }
+        with col_b:
+            st.image(logo_FF)
         # Botón para enviar la solicitud
         col1, col2, col3 = st.columns(3)
         with col2:
