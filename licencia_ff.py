@@ -61,6 +61,10 @@ div[class="stButton"] button {
 """
 mkContainer = """
 <style>
+div[data-testid="column"] {
+    margin: none;
+    border: none;
+    }
 
 div[class="st-emotion-cache-1rsyhoq e1nzilvr5"] p {
     
