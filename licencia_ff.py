@@ -38,7 +38,7 @@ div[data-baseweb="input"] input {
     }
 
 div[data-baseweb="input"] {
-    margin: 0px 0px;
+    margin: 0px 0px 0px 0px;
     border: 0px solid #FF6347;
     }
 
@@ -59,7 +59,7 @@ mkContainer = """
 <style>
 
 div[class="st-emotion-cache-1rsyhoq e1nzilvr5"] p {
-    margin: 0px 0px;
+    margin: 0px 0px 0px 0px;
     border: none;
     background: radial-gradient(circle, #fe603a, #fefb3a, #fe603a);
     color: black;
