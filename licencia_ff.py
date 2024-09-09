@@ -61,7 +61,7 @@ div[class="stButton"] button {
 """
 mkContainer = """
 <style>
-div[data-testid="stVerticalBlockBorderWrapper"] {
+div[class="element-container st-emotion-cache-hqlule e1f1d6gn4"] {
     margin: none;
     border: none;
     }
