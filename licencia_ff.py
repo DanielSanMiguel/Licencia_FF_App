@@ -29,7 +29,7 @@ page_bg_css = """
 custom_css = """
 <style>
 div[data-baseweb="base-input"] {
-    background-color: #c7c7c7;
+    background-color: #848282;
     margin: none;
     border: none;
     }
