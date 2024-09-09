@@ -28,6 +28,10 @@ page_bg_css = """
 """
 custom_css = """
 <style>
+div[data-baseweb="input"] {
+    margin: none;
+    border: none;
+    }
 div[data-baseweb="input"] input {
     background-color: #c7c7c7;  /* Fondo color  */
     border: 3px solid #0f0f0f;  /* Borde color  */
@@ -36,12 +40,6 @@ div[data-baseweb="input"] input {
     font-size: 16px;            /* Tamaño de fuente */
     margin: 1px ;
     }
-
-div[data-baseweb="input"] {
-    margin: 0px 0px 0px;
-    border: none;
-    }
-
 </style>
 """
 button_css = """
@@ -59,7 +57,7 @@ mkContainer = """
 <style>
 
 div[class="st-emotion-cache-1rsyhoq e1nzilvr5"] p {
-    margin: 0px 0px ;
+    margin: 0px 0px;
     border: none;
     background: radial-gradient(circle, #fe603a, #fefb3a, #fe603a);
     color: black;
