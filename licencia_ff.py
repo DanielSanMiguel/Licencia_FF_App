@@ -29,7 +29,10 @@ page_bg_css = """
 custom_css = """
 <style>
 div[data-baseweb="input"] {
-    border-color: #c7c7c7;
+    border-top-color: #c7c7c7;
+    border-bottom-color: #c7c7c7;
+    border-right-color: #c7c7c7;
+    border-left-color: groove;
     border-top-style: groove;
     border-bottom-style: dotted;
     border-right-style: hidden;
