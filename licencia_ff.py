@@ -23,14 +23,11 @@ page_bg_css = """
 <style>
 [data-testid="stAppViewContainer"] {
     background-color: #848282;
-}
+    }
 </style>
 """
 custom_css = """
 <style>
-/* Cambiar el color de fondo y agregar un borde personalizado al textbox */
-
-
 div[data-baseweb="input"] input {
     background-color: #c7c7c7;  /* Fondo color  */
     border: 3px solid #0f0f0f;  /* Borde color  */
@@ -38,7 +35,7 @@ div[data-baseweb="input"] input {
     padding: 10px;              /* Espaciado interno */
     font-size: 16px;            /* Tamaño de fuente */
     margin: 1px ;
-}
+    }
 
 div[data-baseweb="input"] {
     margin: 0px 0px;
@@ -51,7 +48,7 @@ button_css = """
 <style>
 
 div[class="row-widget stButton"] button {
-    color: black;
+    
     border: none;
     background: radial-gradient(circle, #35bf19, #279910, #155a07);
     }
@@ -97,38 +94,40 @@ if contrasena == contrasena_correcta:
         
         headers_at = {"Authorization" : f"Bearer {api_key}",  "Content-Type" : 'application/json' }
         # Botón para enviar la solicitud
-        if validar_correo(email) and nombre and club and puesto and email and nombre_licencia:
-            if st.button("Solicitar 7 días de prueba"):
-                # Cuerpo de la solicitud en formato JSON
-                data = {
-                    'name': nombre_licencia
-                }
-            
-                # Encabezados (headers)
-                headers = {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                    'admin_name': 'flyfut',
-                    'admin_password': admin_password
-                    
-                }
-                json.dumps(data)
-                # Realizar la solicitud POST
-                try:
-                    
-                    response = requests.post(url, data=data, headers=headers)
-            
-                    # Mostrar los resultados
-                    st.subheader("Resultado de la solicitud:")
-                    st.code(f"Código de estado: {response.status_code}")
-                    data_at = {"records": [{"fields": {
-                        'Nombre':nombre, 'Club':club, 'Puesto':puesto, 'Email':email, 'Licencia': response.json()['newLicense']}}]}
-                    response_at = requests.post(url_at, json.dumps(data_at), headers=headers_at)
-                    # Mostrar la respuesta en formato JSON si es posible
+        col1, col2, col3 = st.columns(3)
+        with col2:
+            if validar_correo(email) and nombre and club and puesto and email and nombre_licencia:
+                if st.button("Solicitar 7 días de prueba"):
+                    # Cuerpo de la solicitud en formato JSON
+                    data = {
+                        'name': nombre_licencia
+                    }
+                
+                    # Encabezados (headers)
+                    headers = {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'admin_name': 'flyfut',
+                        'admin_password': admin_password
+                        
+                    }
+                    json.dumps(data)
+                    # Realizar la solicitud POST
                     try:
-                        st.write(response.json())
-                    except json.decoder.JSONDecodeError:
-                        st.write(response.text)
-                except requests.exceptions.RequestException as e:
-                    st.error(f"Error al enviar la solicitud: {e}")
-        else:
-            st.warning("Por favor, rellena todos los campos para habilitar el botón de envío.")
+                        
+                        response = requests.post(url, data=data, headers=headers)
+                
+                        # Mostrar los resultados
+                        st.subheader("Resultado de la solicitud:")
+                        st.code(f"Código de estado: {response.status_code}")
+                        data_at = {"records": [{"fields": {
+                            'Nombre':nombre, 'Club':club, 'Puesto':puesto, 'Email':email, 'Licencia': response.json()['newLicense']}}]}
+                        response_at = requests.post(url_at, json.dumps(data_at), headers=headers_at)
+                        # Mostrar la respuesta en formato JSON si es posible
+                        try:
+                            st.write(response.json())
+                        except json.decoder.JSONDecodeError:
+                            st.write(response.text)
+                    except requests.exceptions.RequestException as e:
+                        st.error(f"Error al enviar la solicitud: {e}")
+            else:
+                st.warning("Por favor, rellena todos los campos para habilitar el botón de envío.")
