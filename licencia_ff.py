@@ -95,10 +95,10 @@ if contrasena == contrasena_correcta:
     with pag.container():
         admin_password = st.secrets['admin_password']
         col_a, col_b, col_c = st.columns(3)
-
+        # Título de la aplicación
+        st.title("Licencia App Fly-Fut")
         with col_b:
-            # Título de la aplicación
-            st.title("Licencia App Fly-Fut")
+            
             st.image(url_imagen_github_1, use_column_width=False)   
         # Entrada para la URL
         url = " https://flyfut.olocip.com/licenses/create"
