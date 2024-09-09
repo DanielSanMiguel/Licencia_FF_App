@@ -18,6 +18,52 @@ def validar_correo(email):
     else:
         return False
 
+# Definir el estilo CSS para cambiar el color de fondo
+page_bg_css = """
+<style>
+[data-testid="stAppViewContainer"] {
+    background-color: #848282;
+}
+</style>
+"""
+custom_css = """
+<style>
+/* Cambiar el color de fondo y agregar un borde personalizado al textbox */
+
+
+div[data-baseweb="input"] input {
+    background-color: #c7c7c7;  /* Fondo color  */
+    border: 3px solid #0f0f0f;  /* Borde color  */
+    border-radius: 10px;        /* Bordes redondeados */
+    padding: 10px;              /* Espaciado interno */
+    font-size: 16px;            /* Tamaño de fuente */
+    margin: 1px ;
+}
+
+div[data-baseweb="input"] {
+    margin: 0px 0px;
+    border: 0px solid #FF6347;
+    }
+
+</style>
+"""
+button_css = """
+<style>
+
+div[class="row-widget stButton"] button {
+    color: black;
+    border: none;
+    background: radial-gradient(circle, #35bf19, #279910, #155a07);
+    }
+
+</style>
+"""
+
+# Agregar el estilo a la app
+st.markdown(page_bg_css, unsafe_allow_html=True)
+st.markdown(custom_css, unsafe_allow_html=True)
+st.markdown(button_css, unsafe_allow_html=True)
+
 pag = st.empty()
 contrasena_correcta = st.secrets['contrasena_correcta']
 pag.title("Aplicación Protegida con Contraseña")
