@@ -38,8 +38,8 @@ div[data-baseweb="input"] input {
     }
 
 div[data-baseweb="input"] {
-    margin: 0px 0px;
-    border: 0px solid #FF6347;
+    margin: none;
+    border: none;
     }
 
 </style>
