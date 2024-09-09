@@ -54,7 +54,7 @@ button_css = """
 div[class="stButton"] button {
     
     border: none;
-    background: radial-gradient(circle, #35bf19, #279910, #155a07);
+    background: radial-gradient(circle, #89ff6f, #5bfe38, #35ff09);
     }
 
 </style>
