@@ -47,7 +47,7 @@ div[data-baseweb="input"] {
 button_css = """
 <style>
 
-div[class="row-widget stButton"] button {
+div[class="stButton"] button {
     
     border: none;
     background: radial-gradient(circle, #35bf19, #279910, #155a07);
