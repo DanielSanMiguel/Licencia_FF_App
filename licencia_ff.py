@@ -61,7 +61,7 @@ div[class="stButton"] button {
 """
 mkContainer = """
 <style>
-div[data-testid="column"] {
+div[data-testid="stVerticalBlockBorderWrapper"] {
     margin: none;
     border: none;
     }
