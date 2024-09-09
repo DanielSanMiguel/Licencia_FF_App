@@ -28,7 +28,7 @@ page_bg_css = """
 """
 custom_css = """
 <style>
-div[data-baseweb="input"] {
+div[data-baseweb="base-input"] {
     background-color: rgb(132 130 130);
     }
 div[data-baseweb="base-input"] input {
