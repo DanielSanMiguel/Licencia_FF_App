@@ -55,11 +55,22 @@ div[class="stButton"] button {
 
 </style>
 """
+mkContainer = """
+<style>
 
+div[data-testid="stMarkdownContainer"] {
+    
+    border: none;
+    background: radial-gradient(circle, #fe603a, #fefb3a, #fe603a);
+    }
+
+</style>
+"""
 # Agregar el estilo a la app
 st.markdown(page_bg_css, unsafe_allow_html=True)
 st.markdown(custom_css, unsafe_allow_html=True)
 st.markdown(button_css, unsafe_allow_html=True)
+st.markdown(mkContainer, unsafe_allow_html=True)
 
 pag = st.empty()
 contrasena_correcta = st.secrets['contrasena_correcta']
