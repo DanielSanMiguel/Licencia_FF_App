@@ -94,7 +94,7 @@ if contrasena == contrasena_correcta:
     pag.empty()
     with pag.container():
         admin_password = st.secrets['admin_password']
-        col_a, col_b, col_c = st.columns(3)
+        col_a, col_b, col_c = st.columns([1,6,1])
 
         with col_b:
             # Título de la aplicación
