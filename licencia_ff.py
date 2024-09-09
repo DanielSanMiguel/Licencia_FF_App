@@ -45,7 +45,7 @@ if contrasena == contrasena_correcta:
         
         # Datos y credenciales AT
         api_key = st.secrets['at_token']
-        base_id = 'appFezarrh9fv6WrS'
+        base_id = 'appjPY2KlFg6bpcT1'
         table_name = 'List_licencias'
         url_at = 'https://api.airtable.com/v0/appFezarrh9fv6WrS/List_licencias'
         
