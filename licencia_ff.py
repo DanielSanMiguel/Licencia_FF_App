@@ -9,8 +9,6 @@ import streamlit as st
 import requests
 import json
 import re
-from PIL import Image
-from io import BytesIO
 
 def validar_correo(email):
     # Expresión regular para correos electrónicos
@@ -85,13 +83,7 @@ st.markdown(button_css, unsafe_allow_html=True)
 st.markdown(mkContainer, unsafe_allow_html=True)
 
 url_imagen_github_1 = "https://raw.githubusercontent.com/DanielSanMiguel/Licencia_FF_App/main/logo.jpg"
-token_github = st.secrets['github_token']
-headers = {
-    "Authorization": f"token {token_github}"
-    }
-response_1 = requests.get(url_imagen_github_1, headers=headers)
-imagen_bytes_1 = BytesIO(response_1.content)
-logo_FF = Image.open(imagen_bytes_1)
+
 
 pag = st.empty()
 contrasena_correcta = st.secrets['contrasena_correcta']
@@ -128,7 +120,7 @@ if contrasena == contrasena_correcta:
             
             headers_at = {"Authorization" : f"Bearer {api_key}",  "Content-Type" : 'application/json' }
         with col_b:
-            st.image(logo_FF)
+            st.image(url_imagen_github_1, use_column_width=True)
         # Botón para enviar la solicitud
         col1, col2, col3 = st.columns(3)
         with col2:
