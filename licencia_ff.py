@@ -61,8 +61,9 @@ div[class="stButton"] button {
 """
 mkContainer = """
 <style>
-div[class="st-emotion-cache-1rsyhoq e1nzilvr5"] {
+div[data-testid="stAlert"] {
     border: none;
+    background-color: #c7c7c7;
     }
 
 div[class="st-emotion-cache-1rsyhoq e1nzilvr5"] p {
