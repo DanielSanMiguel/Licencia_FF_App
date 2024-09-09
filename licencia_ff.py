@@ -61,7 +61,7 @@ div[class="stButton"] button {
 """
 mkContainer = """
 <style>
-div[class="element-container st-emotion-cache-hqlule e1f1d6gn4"] {
+div[data-testid="stAlertContainer"] {
     margin: none;
     border: none;
     }
