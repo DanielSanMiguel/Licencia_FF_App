@@ -34,8 +34,8 @@ div[data-baseweb="input"] {
     border-right-color: #c7c7c7;
     border-left-color: c7c7c7;
     border-top-style: groove;
-    border-bottom-style: dotted;
-    border-right-style: hidden;
+    border-bottom-style: groove;
+    border-right-style: groove;
     border-left-style: groove;
     }
 div[data-baseweb="base-input"] input {
