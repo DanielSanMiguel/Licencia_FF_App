@@ -47,7 +47,7 @@ if contrasena == contrasena_correcta:
         api_key = st.secrets['at_token']
         base_id = 'appjPY2KlFg6bpcT1'
         table_name = 'List_licencias'
-        url_at = 'https://api.airtable.com/v0/appFezarrh9fv6WrS/List_licencias'
+        url_at = 'https://api.airtable.com/v0/appjPY2KlFg6bpcT1/List_licencias'
         
         headers_at = {"Authorization" : f"Bearer {api_key}",  "Content-Type" : 'application/json' }
         # Botón para enviar la solicitud
