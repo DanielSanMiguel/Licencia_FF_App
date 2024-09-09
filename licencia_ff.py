@@ -32,7 +32,7 @@ div[data-baseweb="input"] {
     border-top-color: #c7c7c7;
     border-bottom-color: #c7c7c7;
     border-right-color: #c7c7c7;
-    border-left-color: groove;
+    border-left-color: c7c7c7;
     border-top-style: groove;
     border-bottom-style: dotted;
     border-right-style: hidden;
