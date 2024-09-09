@@ -29,8 +29,11 @@ page_bg_css = """
 custom_css = """
 <style>
 div[class="st-ae st-af st-ag st-ah st-ai st-aj st-ak st-al st-am st-an st-ao st-ap st-aq st-ar st-as st-at st-au st-av st-aw st-ax st-ay st-az st-b0 st-b1 st-b2 st-b3 st-b4 st-b5 st-b6 st-b7 st-b8 st-cc st-ba] {
-    margin: none;
-    border: none;
+    background-color: #c7c7c7;  /* Fondo color  */
+    border: 3px solid #0f0f0f;  /* Borde color  */
+    border-radius: 10px;        /* Bordes redondeados */
+    padding: 10px;              /* Espaciado interno */
+    font-size: 16px;
     }
 div[data-baseweb="input"] input {
     background-color: #c7c7c7;  /* Fondo color  */
