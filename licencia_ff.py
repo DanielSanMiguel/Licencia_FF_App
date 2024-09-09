@@ -31,6 +31,7 @@ custom_css = """
 div[data-baseweb="input"] {
     margin: none;
     border: none;
+    background-color: #c7c7c7;
     }
 div[data-baseweb="input"] input {
     background-color: #c7c7c7;  /* Fondo color  */
