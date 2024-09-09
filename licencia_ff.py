@@ -98,29 +98,29 @@ if contrasena == contrasena_correcta:
         with col_a:
             # Título de la aplicación
             st.title("Licencia App Fly-Fut")
-            
-            # Entrada para la URL
-            url = " https://flyfut.olocip.com/licenses/create"
-            
-            # Datos del usuario
-            nombre = st.text_input("Nombre y Apellidos", "")
-            club = st.text_input("Club", "")
-            puesto = st.text_input("Puesto/Cargo", "")
-            email = st.text_input("E-mail", "")
-            
-            # Campos de entrada para el cuerpo de la solicitud
-            
-            nombre_licencia = st.text_input("Nombre licencia (Ejemplo: Juan1)", "")
-            
-            # Datos y credenciales AT
-            api_key = st.secrets['at_token']
-            base_id = 'appjPY2KlFg6bpcT1'
-            table_name = 'List_licencias'
-            url_at = 'https://api.airtable.com/v0/appjPY2KlFg6bpcT1/List_licencias'
-            
-            headers_at = {"Authorization" : f"Bearer {api_key}",  "Content-Type" : 'application/json' }
         with col_b:
-            st.image(url_imagen_github_1, use_column_width=True)
+            st.image(url_imagen_github_1, use_column_width=True)   
+        # Entrada para la URL
+        url = " https://flyfut.olocip.com/licenses/create"
+        
+        # Datos del usuario
+        nombre = st.text_input("Nombre y Apellidos", "")
+        club = st.text_input("Club", "")
+        puesto = st.text_input("Puesto/Cargo", "")
+        email = st.text_input("E-mail", "")
+        
+        # Campos de entrada para el cuerpo de la solicitud
+        
+        nombre_licencia = st.text_input("Nombre licencia (Ejemplo: Juan1)", "")
+        
+        # Datos y credenciales AT
+        api_key = st.secrets['at_token']
+        base_id = 'appjPY2KlFg6bpcT1'
+        table_name = 'List_licencias'
+        url_at = 'https://api.airtable.com/v0/appjPY2KlFg6bpcT1/List_licencias'
+        
+        headers_at = {"Authorization" : f"Bearer {api_key}",  "Content-Type" : 'application/json' }
+
         # Botón para enviar la solicitud
         col1, col2, col3 = st.columns(3)
         with col2:
