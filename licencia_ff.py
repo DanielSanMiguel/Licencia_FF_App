@@ -63,7 +63,7 @@ mkContainer = """
 <style>
 div[data-testid="stAlert"] {
     border: none;
-    background-color: #c7c7c7;
+    background-color: #848282;
     }
 
 div[class="st-emotion-cache-1rsyhoq e1nzilvr5"] p {
