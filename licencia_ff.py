@@ -31,9 +31,10 @@ custom_css = """
 div[data-baseweb="input"] {
     margin: none;
     border: none;
+    background-color: #c7c7c7;  /* Fondo color  */
     }
 div[data-baseweb="input"] input {
-    background-color: #c7c7c7;  /* Fondo color  */
+    
     border: 3px solid #0f0f0f;  /* Borde color  */
     border-radius: 10px;        /* Bordes redondeados */
     padding: 10px;              /* Espaciado interno */
@@ -57,7 +58,7 @@ mkContainer = """
 <style>
 
 div[class="st-emotion-cache-1rsyhoq e1nzilvr5"] p {
-    margin: 0px 0px;
+    
     border: none;
     background: radial-gradient(circle, #fe603a, #fefb3a, #fe603a);
     color: black;
