@@ -33,7 +33,7 @@ div[data-baseweb="input"] {
     border: none;
     background-color: #c7c7c7;  /* Fondo color  */
     }
-div[data-baseweb="input"] input {
+div[data-baseweb="base-input"] input {
     background-color: #c7c7c7;  /* Fondo color  */
     border: 3px solid #0f0f0f;  /* Borde color  */
     border-radius: 10px;        /* Bordes redondeados */
