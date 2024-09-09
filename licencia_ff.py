@@ -30,6 +30,7 @@ custom_css = """
 <style>
 div[data-baseweb="base-input"] {
     background-color: rgb(132 130 130);
+    border: none;
     }
 div[data-baseweb="base-input"] input {
     background-color: #c7c7c7;  /* Fondo color  */
