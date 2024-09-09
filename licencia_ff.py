@@ -62,7 +62,6 @@ div[class="stButton"] button {
 mkContainer = """
 <style>
 div[data-testid="stAlert"] {
-    margin: none;
     border: none;
     }
 
