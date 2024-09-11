@@ -29,12 +29,12 @@ page_bg_css = """
 custom_css = """
 <style>
 div[data-baseweb="input"] {
-    background-color: #848282;
+    background-color: transparent;
     margin: none;
     border: none;
     }
 div[data-baseweb="base-input"] {
-    background-color: #848282;
+    background-color: transparent;
     margin: none;
     border: none;
     }
@@ -64,7 +64,7 @@ mkContainer = """
 <style>
 div[class="st-emotion-cache-1wmy9hl e1f1d6gn1"] {
     border: none;
-    background-color: #848282;
+    background-color: transparent;
     }
 
 div[class="st-emotion-cache-1rsyhoq e1nzilvr5"] p {
