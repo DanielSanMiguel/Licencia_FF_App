@@ -71,7 +71,7 @@ div[data-testid="stAlertContainer"] {
 div[class="st-emotion-cache-1rsyhoq e1nzilvr5"] p {
     
     border: none;
-    background: radial-gradient(circle, #c2c1c0, #cba177, #fe603a);
+    background: radial-gradient(circle, #c2c1c0, #dcb06e, #de9e3f);
     border: 1px solid #0f0f0f;  /* Borde color  */
     border-radius: 10px;        /* Bordes redondeados */
     color: black;
