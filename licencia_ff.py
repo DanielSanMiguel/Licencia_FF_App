@@ -124,8 +124,9 @@ if contrasena == contrasena_correcta:
 
         # Botón para enviar la solicitud
         col1, col2, col3 = st.columns(3)
-        with col2:
-            if validar_correo(email) and nombre and club and puesto and email and nombre_licencia:
+   
+        if validar_correo(email) and nombre and club and puesto and email and nombre_licencia:
+            with col2:
                 if st.button("Solicitar 7 días de prueba"):
                     # Cuerpo de la solicitud en formato JSON
                     data = {
@@ -158,5 +159,5 @@ if contrasena == contrasena_correcta:
                             st.write(response.text)
                     except requests.exceptions.RequestException as e:
                         st.error(f"Error al enviar la solicitud: {e}")
-            else:
-                st.warning("Por favor, rellena todos los campos para habilitar el botón de envío.")
+        else:
+            st.warning("Por favor, rellena todos los campos para habilitar el botón de envío.")
