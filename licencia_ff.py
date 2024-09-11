@@ -39,7 +39,7 @@ div[data-baseweb="base-input"] {
     border: none;
     }
 div[data-baseweb="base-input"] input {
-    background: linear-gradient(to left, #d7ccb5, #cec1a5, #e9e2d5, #cec1a5, #d7ccb5);
+    background: linear-gradient(to left, #b0aead, #c9c7c5, #dddbd8, #c9c7c5, #b0aead);
     border: 3px solid #0f0f0f;  /* Borde color  */
     border-radius: 10px;        /* Bordes redondeados */
     padding: 10px;              /* Espaciado interno */
