@@ -23,8 +23,6 @@ page_bg_css = """
 <style>
 [data-testid="stAppViewContainer"] {
     background: linear-gradient(to bottom, #323232, #6a6a6a, #b2b1b1, #6a6a6a, #323232);
-    margin: 0;
-    padding: 0;
     }
 </style>
 """
@@ -64,7 +62,8 @@ div[class="stButton"] button {
 """
 mkContainer = """
 <style>
-div[class="st-emotion-cache-1wmy9hl e1f1d6gn1"] {
+div[data-testid="stAlertContainer"] {
+    margin: none;
     border: none;
     background-color: transparent;
     }
