@@ -22,7 +22,7 @@ def validar_correo(email):
 page_bg_css = """
 <style>
 [data-testid="stAppViewContainer"] {
-    background-color: #848282;
+    background: linear-gradient(to bottom, #323232, #6a6a6a, #b2b1b1, #6a6a6a, #323232);
     }
 </style>
 """
