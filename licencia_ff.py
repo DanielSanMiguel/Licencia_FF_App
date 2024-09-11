@@ -72,6 +72,8 @@ div[class="st-emotion-cache-1rsyhoq e1nzilvr5"] p {
     
     border: none;
     background: radial-gradient(circle, #fe603a, #fefb3a, #fe603a);
+    border: 3px solid #0f0f0f;  /* Borde color  */
+    border-radius: 10px;        /* Bordes redondeados */
     color: black;
     }
 
