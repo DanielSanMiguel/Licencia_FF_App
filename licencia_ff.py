@@ -34,7 +34,7 @@ div[data-baseweb="input"] {
     border: none;
     }
 div[data-baseweb="base-input"] {
-    background-color: transparent;
+    background: linear-gradient(to left, #b0aead, #c9c7c5, #dddbd8, #c9c7c5, #b0aead);
     margin: none;
     border: none;
     }
@@ -45,7 +45,7 @@ div[data-baseweb="base-input"] input {
     border-radius: 10px;        /* Bordes redondeados */
     padding: 10px;              /* Espaciado interno */
     font-size: 16px;            /* Tamaño de fuente */
-    margin: 1px ;
+    margin: none ;
     }
 </style>
 """
