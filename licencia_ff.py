@@ -23,6 +23,8 @@ page_bg_css = """
 <style>
 [data-testid="stAppViewContainer"] {
     background: linear-gradient(to bottom, #323232, #6a6a6a, #b2b1b1, #6a6a6a, #323232);
+    margin: 0;
+    padding: 0;
     }
 </style>
 """
