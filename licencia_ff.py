@@ -9,6 +9,8 @@ import streamlit as st
 import requests
 import json
 import re
+import pandas as pd
+from airtable import Airtable
 
 def validar_correo(email):
     # Expresión regular para correos electrónicos
@@ -17,6 +19,30 @@ def validar_correo(email):
         return True
     else:
         return False
+
+def convert_to_dataframe(airtable_records):
+    """Converts dictionary output from airtable_download() into a Pandas dataframe."""
+    airtable_rows = []
+    airtable_index = []
+    for record in airtable_records:
+        airtable_rows.append(record['fields'])
+        airtable_index.append(record['id'])
+    airtable_dataframe = pd.DataFrame(airtable_rows)
+    return airtable_dataframe
+
+# Datos y credenciales AT
+api_key = st.secrets['at_token']
+base_id = 'appjPY2KlFg6bpcT1'
+table_name = 'List_licencias'
+url_at = 'https://api.airtable.com/v0/appjPY2KlFg6bpcT1/List_licencias'
+headers_at = {"Authorization" : f"Bearer {api_key}",  "Content-Type" : 'application/json' }
+
+at_Table1 = Airtable(base_id, table_name, )
+# recuperamos datos de la tabla
+result_at_Table1 = at_Table1.get_all(api_key, view = 'Grid view')
+# convertimos a DataFrame de Pandas
+df = convert_to_dataframe(result_at_Table1)
+lista_mail= df['Email'].tolist()
 
 # Definir el estilo CSS para cambiar el color de fondo
 page_bg_css = """
@@ -106,23 +132,19 @@ with pag.container():
     club = st.text_input("Club", "")
     puesto = st.text_input("Puesto/Cargo", "")
     email = st.text_input("E-mail", "")
+    ya_existe = False
+    if email in lista_mail:
+        st.write('Correo ya vinculado a licencia, pruba con otro correo')
+        ya_existe = True
     
     # Campos de entrada para el cuerpo de la solicitud
     
     nombre_licencia = nombre
     
-    # Datos y credenciales AT
-    api_key = st.secrets['at_token']
-    base_id = 'appjPY2KlFg6bpcT1'
-    table_name = 'List_licencias'
-    url_at = 'https://api.airtable.com/v0/appjPY2KlFg6bpcT1/List_licencias'
-    
-    headers_at = {"Authorization" : f"Bearer {api_key}",  "Content-Type" : 'application/json' }
-
     # Botón para enviar la solicitud
     col1, col2, col3 = st.columns(3)
    
-    if validar_correo(email) and nombre and club and puesto and email and nombre_licencia:
+    if validar_correo(email) and ya_existe==False and nombre and club and puesto and email and nombre_licencia:
         with col2:
             if st.button("Solicitar 7 días de prueba"):
                 # Cuerpo de la solicitud en formato JSON
