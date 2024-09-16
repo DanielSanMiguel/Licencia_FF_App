@@ -134,7 +134,7 @@ with pag.container():
     email = st.text_input("E-mail", "")
     ya_existe = False
     if email in lista_mail:
-        st.write('Correo ya vinculado a licencia, pruba con otro correo')
+        st.write('Correo ya vinculado a licencia, prueba con otro correo')
         ya_existe = True
     
     # Campos de entrada para el cuerpo de la solicitud
