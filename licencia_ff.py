@@ -37,9 +37,9 @@ table_name = 'List_licencias'
 url_at = 'https://api.airtable.com/v0/appjPY2KlFg6bpcT1/List_licencias'
 headers_at = {"Authorization" : f"Bearer {api_key}",  "Content-Type" : 'application/json' }
 
-at_Table1 = Airtable(base_id, table_name, api_key)
+at_Table1 = Airtable(base_id, api_key)
 # recuperamos datos de la tabla
-result_at_Table1 = at_Table1.get_all(view='Grid view')
+result_at_Table1 = at_Table1.get(table_name)
 # convertimos a DataFrame de Pandas
 df = convert_to_dataframe(result_at_Table1)
 lista_mail= df['Email'].tolist()
