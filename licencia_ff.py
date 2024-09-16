@@ -9,7 +9,6 @@ import streamlit as st
 import requests
 import json
 import re
-import time
 
 def validar_correo(email):
     # Expresión regular para correos electrónicos
@@ -89,8 +88,6 @@ url_imagen_github_1 = "https://raw.githubusercontent.com/DanielSanMiguel/Licenci
 
 
 pag = st.empty()
-pag.image(url_imagen_github_1, width= 600)
-time.sleep(3)
 
 pag.empty()
 with pag.container():
