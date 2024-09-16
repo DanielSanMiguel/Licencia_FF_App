@@ -37,9 +37,9 @@ table_name = 'List_licencias'
 url_at = 'https://api.airtable.com/v0/appjPY2KlFg6bpcT1/List_licencias'
 headers_at = {"Authorization" : f"Bearer {api_key}",  "Content-Type" : 'application/json' }
 
-at_Table1 = Airtable(base_id, table_name, )
+at_Table1 = Airtable(base_id, table_name, api_key)
 # recuperamos datos de la tabla
-result_at_Table1 = at_Table1.get_all(api_key, view = 'Grid view')
+result_at_Table1 = at_Table1.get_all(view = 'Grid view')
 # convertimos a DataFrame de Pandas
 df = convert_to_dataframe(result_at_Table1)
 lista_mail= df['Email'].tolist()
@@ -144,7 +144,7 @@ with pag.container():
     # Botón para enviar la solicitud
     col1, col2, col3 = st.columns(3)
    
-    if validar_correo(email) and ya_existe==False and nombre and club and puesto and email and nombre_licencia:
+    if validar_correo(email) and nombre and club and puesto and email and nombre_licencia and ya_existe==False:
         with col2:
             if st.button("Solicitar 7 días de prueba"):
                 # Cuerpo de la solicitud en formato JSON
