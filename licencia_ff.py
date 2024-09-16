@@ -48,7 +48,7 @@ lista_mail= df['Email'].tolist()
 page_bg_css = """
 <style>
 [data-testid="stAppViewContainer"] {
-    background: linear-gradient(to bottom, #323232 10%, #6a6a6a 20%, #b2b1b1 70%, #6a6a6a 90%, #323232 100%);
+    background: linear-gradient(to bottom, #323232 20%, #6a6a6a 40%, #b2b1b1 60%, #6a6a6a 80%, #323232 100%);
     }
 </style>
 """
