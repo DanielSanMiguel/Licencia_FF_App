@@ -27,7 +27,7 @@ def convert_to_dataframe(airtable_records):
     for record in airtable_records:
         airtable_rows.append(record['fields'])
         airtable_index.append(record['id'])
-    airtable_dataframe = pd.DataFrame(airtable_rows)
+    airtable_dataframe = pd.DataFrame(airtable_rows, index=airtable_index)
     return airtable_dataframe
 
 # Datos y credenciales AT
