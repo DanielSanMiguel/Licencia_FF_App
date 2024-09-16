@@ -149,7 +149,6 @@ if contrasena == contrasena_correcta:
                 
                         # Mostrar los resultados
                         st.subheader("Resultado de la solicitud:")
-                        st.code(f"Código de estado: {response.status_code}")
                         data_at = {"records": [{"fields": {
                             'Nombre':nombre, 'Club':club, 'Puesto':puesto, 'Email':email, 'Licencia': response.json()['newLicense']}}]}
                         response_at = requests.post(url_at, json.dumps(data_at), headers=headers_at)
