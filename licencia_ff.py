@@ -99,7 +99,7 @@ div[class="st-emotion-cache-1rsyhoq e1nzilvr5"] p {
     
     border: none;
     background-color: transparent;
-    color: #ff9900;
+    color: #f57418;
     }
 
 </style>
