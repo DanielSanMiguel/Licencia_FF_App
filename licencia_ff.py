@@ -89,7 +89,7 @@ url_imagen_github_1 = "https://raw.githubusercontent.com/DanielSanMiguel/Licenci
 
 
 pag = st.empty()
-st.image(url_imagen_github_1, use_column_width=False)
+pag.image(url_imagen_github_1, use_column_width=False)
 time.sleep(3)
 
 pag.empty()
