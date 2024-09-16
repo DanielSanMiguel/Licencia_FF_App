@@ -113,7 +113,7 @@ if contrasena == contrasena_correcta:
         
         # Campos de entrada para el cuerpo de la solicitud
         
-        nombre_licencia = st.text_input("Nombre licencia (Ejemplo: Juan1)", "")
+        nombre_licencia = nombre
         
         # Datos y credenciales AT
         api_key = st.secrets['at_token']
@@ -154,10 +154,8 @@ if contrasena == contrasena_correcta:
                             'Nombre':nombre, 'Club':club, 'Puesto':puesto, 'Email':email, 'Licencia': response.json()['newLicense']}}]}
                         response_at = requests.post(url_at, json.dumps(data_at), headers=headers_at)
                         # Mostrar la respuesta en formato JSON si es posible
-                        try:
-                            st.write(response.json())
-                        except json.decoder.JSONDecodeError:
-                            st.write(response.text)
+                        st.write('En breve se enviará un mail a la dirección que has facilitado con el número de licencia y las instrucciones, gracias.')
+
                     except requests.exceptions.RequestException as e:
                         st.error(f"Error al enviar la solicitud: {e}")
         else:
