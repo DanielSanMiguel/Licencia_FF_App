@@ -117,17 +117,14 @@ st.markdown(mkContainer, unsafe_allow_html=True)
 url_imagen_github_1 = "https://raw.githubusercontent.com/DanielSanMiguel/Licencia_FF_App/main/foto_ff.jpg"
 
 
-pag = st.empty()
 
-pag.empty()
-with pag.container():
+with st.container():
     admin_password = st.secrets['admin_password']
     
     # Título de la aplicación
     st.title("Licencia App Fly-Fut")
     st.header('Rellene los campos para enviar el formulario')
-    cont = st.container()
-    cont.image(url_imagen_github_1, use_column_width=True)
+    st.image(url_imagen_github_1, use_column_width=True)
     # Entrada para la URL
     url = " https://flyfut.olocip.com/licenses/create"
     
