@@ -47,14 +47,7 @@ try:
 except:
     lista_mail=[]
 
-# Definir el estilo CSS para cambiar el color de fondo
-page_bg_css = """
-<style>
-[data-testid="stAppViewContainer"] {
-    background: white;
-    }
-</style>
-"""
+
 custom_css = """
 <style>
 div[data-baseweb="input"] {
