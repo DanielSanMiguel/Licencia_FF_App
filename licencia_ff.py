@@ -126,7 +126,7 @@ with pag.container():
     # Título de la aplicación
     st.title("Licencia App Fly-Fut")
     st.header('Rellene los campos para enviar el formulario')
-    st.image(url_imagen_github_1, use_column_width=True)
+    st.image(url_imagen_github_1, use_column_width=False)
     # Entrada para la URL
     url = " https://flyfut.olocip.com/licenses/create"
     
