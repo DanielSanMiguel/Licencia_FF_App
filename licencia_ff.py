@@ -124,23 +124,25 @@ with st.container():
     # Título de la aplicación
     st.title("Licencia App Fly-Fut")
     st.header('Rellene los campos para enviar el formulario')
-    st.image(url_imagen_github_1, use_column_width='auto')
-    # Entrada para la URL
-    url = " https://flyfut.olocip.com/licenses/create"
-    
-    # Datos del usuario
-    nombre = st.text_input("Nombre y Apellidos", "")
-    club = st.text_input("Club", "")
-    puesto = st.text_input("Puesto/Cargo", "")
-    email = st.text_input("E-mail", "")
-    ya_existe = False
-    if email in lista_mail:
-        st.write('Correo ya vinculado a licencia, prueba con otro correo')
-        ya_existe = True
-    
-    # Campos de entrada para el cuerpo de la solicitud
-    
-    nombre_licencia = nombre
+    col_a=st.columns(1)
+    with col_a:
+        st.image(url_imagen_github_1, use_column_width='auto')
+        # Entrada para la URL
+        url = " https://flyfut.olocip.com/licenses/create"
+        
+        # Datos del usuario
+        nombre = st.text_input("Nombre y Apellidos", "")
+        club = st.text_input("Club", "")
+        puesto = st.text_input("Puesto/Cargo", "")
+        email = st.text_input("E-mail", "")
+        ya_existe = False
+        if email in lista_mail:
+            st.write('Correo ya vinculado a licencia, prueba con otro correo')
+            ya_existe = True
+        
+        # Campos de entrada para el cuerpo de la solicitud
+        
+        nombre_licencia = nombre
     
     # Botón para enviar la solicitud
     col1, col2, col3 = st.columns(3)
