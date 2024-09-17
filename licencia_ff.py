@@ -51,7 +51,7 @@ except:
 page_bg_css = """
 <style>
 [data-testid="stAppViewContainer"] {
-    background: linear-gradient(to bottom, #323232 20%, #6a6a6a 40%, #b2b1b1 50%, #6a6a6a 70%, #323232 100%);
+    background: white;
     }
 </style>
 """
@@ -114,7 +114,7 @@ st.markdown(custom_css, unsafe_allow_html=True)
 st.markdown(button_css, unsafe_allow_html=True)
 st.markdown(mkContainer, unsafe_allow_html=True)
 
-url_imagen_github_1 = "https://raw.githubusercontent.com/DanielSanMiguel/Licencia_FF_App/main/logo.jpg"
+url_imagen_github_1 = "https://raw.githubusercontent.com/DanielSanMiguel/Licencia_FF_App/main/foto_ff.jpg"
 
 
 pag = st.empty()
