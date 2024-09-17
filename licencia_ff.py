@@ -102,7 +102,7 @@ div[class="st-emotion-cache-1rsyhoq e1nzilvr5"] p {
 </style>
 """
 # Agregar el estilo a la app
-st.markdown(page_bg_css, unsafe_allow_html=True)
+#st.markdown(page_bg_css, unsafe_allow_html=True)
 st.markdown(custom_css, unsafe_allow_html=True)
 st.markdown(button_css, unsafe_allow_html=True)
 st.markdown(mkContainer, unsafe_allow_html=True)
