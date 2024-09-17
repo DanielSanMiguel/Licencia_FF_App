@@ -127,7 +127,7 @@ with pag.container():
     st.title("Licencia App Fly-Fut")
     with col_b:
         
-        st.image(url_imagen_github_1, use_column_width=False)
+        st.image(url_imagen_github_1, use_column_width=True)
     # Entrada para la URL
     url = " https://flyfut.olocip.com/licenses/create"
     
