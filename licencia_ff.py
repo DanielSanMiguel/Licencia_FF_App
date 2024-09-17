@@ -42,7 +42,10 @@ at_Table1 = Airtable(base_id, api_key)
 result_at_Table1 = at_Table1.get(table_name)
 # convertimos a DataFrame de Pandas
 df = convert_to_dataframe(result_at_Table1)
-lista_mail= df['Email'].tolist()
+try:
+    lista_mail= df['Email'].tolist()
+except:
+    lista_mail=[]
 
 # Definir el estilo CSS para cambiar el color de fondo
 page_bg_css = """
