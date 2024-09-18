@@ -47,14 +47,7 @@ try:
 except:
     lista_mail=[]
 
-# Definir el estilo CSS para cambiar el color de fondo
-page_bg_css = """
-<style>
-[data-testid="stAppViewContainer"] {
-    background: linear-gradient(to bottom, #323232 20%, #6a6a6a 40%, #b2b1b1 50%, #6a6a6a 70%, #323232 100%);
-    }
-</style>
-"""
+
 custom_css = """
 <style>
 div[data-baseweb="input"] {
@@ -102,33 +95,29 @@ div[class="st-emotion-cache-1rsyhoq e1nzilvr5"] p {
     
     border: none;
     background-color: transparent;
-    color: #f57418;
+    color: black;
+    font-size: large;
     }
 
 </style>
 """
 # Agregar el estilo a la app
-#st.markdown(page_bg_css, unsafe_allow_html=True)
-#st.markdown(custom_css, unsafe_allow_html=True)
-#st.markdown(button_css, unsafe_allow_html=True)
-#st.markdown(mkContainer, unsafe_allow_html=True)
+st.markdown(custom_css, unsafe_allow_html=True)
+st.markdown(button_css, unsafe_allow_html=True)
+st.markdown(mkContainer, unsafe_allow_html=True)
 
-url_imagen_github_1 = "https://raw.githubusercontent.com/DanielSanMiguel/Licencia_FF_App/main/logo.jpg"
+url_imagen_github_1 = "https://raw.githubusercontent.com/DanielSanMiguel/Licencia_FF_App/main/foto_ff.jpg"
+admin_password = st.secrets['admin_password']
+# Entrada para la URL
+url = " https://flyfut.olocip.com/licenses/create"
 
-
-pag = st.empty()
-
-pag.empty()
-with pag.container():
-    admin_password = st.secrets['admin_password']
-    col_a, col_b, col_c = st.columns(3)
+with st.container():
     # Título de la aplicación
     st.title("Licencia App Fly-Fut")
-    with col_b:
-        
-        st.image(url_imagen_github_1, use_column_width=False)
-    # Entrada para la URL
-    url = " https://flyfut.olocip.com/licenses/create"
+    st.subheader('Rellena los campos para enviar el formulario')
+    st.image(url_imagen_github_1, use_column_width='auto')
+
+
     
     # Datos del usuario
     nombre = st.text_input("Nombre y Apellidos", "")
@@ -137,7 +126,7 @@ with pag.container():
     email = st.text_input("E-mail", "")
     ya_existe = False
     if email in lista_mail:
-        st.write('Correo ya vinculado a licencia, prueba con otro correo')
+        st.write(':warning: Correo ya vinculado a licencia, prueba con otro correo.')
         ya_existe = True
     
     # Campos de entrada para el cuerpo de la solicitud
