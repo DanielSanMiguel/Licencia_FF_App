@@ -122,9 +122,9 @@ with st.container():
     st.subheader('Rellena todos los campos para obtener tu licencia')
 
     # Datos del usuario
-    nombre = st.text_input("Nombre y Apellidos", "")
-    club = st.text_input("Club", "")
-    puesto = st.text_input("Puesto/Cargo", "")
+    nombre = st.text_input("Nombre y Apellidos - Name", "")
+    club = st.text_input("Club - Team", "")
+    puesto = st.text_input("Puesto/Cargo - Position/Role", "")
     email = st.text_input("E-mail", "")
     ya_existe = False
     if email in lista_mail:
