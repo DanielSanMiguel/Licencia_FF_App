@@ -106,7 +106,7 @@ div[class="st-emotion-cache-1rsyhoq e1nzilvr5"] p {
 #st.markdown(button_css, unsafe_allow_html=True)
 #st.markdown(mkContainer, unsafe_allow_html=True)
 
-url_imagen_github_1 = "https://raw.githubusercontent.com/DanielSanMiguel/Licencia_FF_App/main/foto_ff.jpg"
+url_imagen_github_1 = "https://raw.githubusercontent.com/DanielSanMiguel/Licencia_FF_App/main/foto_ff_cut.jpg"
 admin_password = st.secrets['admin_password']
 # Entrada para la URL
 url = " https://flyfut.olocip.com/licenses/create"
