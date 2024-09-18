@@ -113,7 +113,7 @@ admin_password = st.secrets['admin_password']
 url = " https://flyfut.olocip.com/licenses/create"
 
 st.set_page_config(
-    page_title="Mi App",  # Título de la pestaña
+    page_title="Fly-Fut Analytics",  # Título de la pestaña
     page_icon=logo,      # Puedes usar un emoji o una imagen
     layout="wide"        # Opcional: modo ancho
 )
