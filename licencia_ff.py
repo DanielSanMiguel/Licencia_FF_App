@@ -120,7 +120,7 @@ with st.container():
     # Título de la aplicación
     st.image(url_imagen_github_1, use_column_width='auto')
     st.subheader('Rellena todos los campos para obtener tu licencia.')
-    st.subheader('Fill the form to obtain your license.")
+    st.subheader('Fill the form to obtain your license.')
     # Datos del usuario
     nombre = st.text_input("Nombre y Apellidos - Name", "")
     club = st.text_input("Club - Team", "")
