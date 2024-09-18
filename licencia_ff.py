@@ -115,7 +115,6 @@ url = " https://flyfut.olocip.com/licenses/create"
 st.set_page_config(
     page_title="Fly-Fut Analytics",  # Título de la pestaña
     page_icon=logo,      # Puedes usar un emoji o una imagen
-    layout="wide"        # Opcional: modo ancho
 )
 with st.container():
     # Título de la aplicación
