@@ -102,9 +102,9 @@ div[class="st-emotion-cache-1rsyhoq e1nzilvr5"] p {
 </style>
 """
 # Agregar el estilo a la app
-st.markdown(custom_css, unsafe_allow_html=True)
-st.markdown(button_css, unsafe_allow_html=True)
-st.markdown(mkContainer, unsafe_allow_html=True)
+#st.markdown(custom_css, unsafe_allow_html=True)
+#st.markdown(button_css, unsafe_allow_html=True)
+#st.markdown(mkContainer, unsafe_allow_html=True)
 
 url_imagen_github_1 = "https://raw.githubusercontent.com/DanielSanMiguel/Licencia_FF_App/main/foto_ff.jpg"
 admin_password = st.secrets['admin_password']
