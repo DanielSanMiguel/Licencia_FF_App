@@ -118,8 +118,6 @@ st.set_page_config(
 )
 with st.container():
     # Título de la aplicación
-    #st.title("Licencia Fly-Fut Analytics")
-    
     st.image(url_imagen_github_1, use_column_width='auto')
     st.subheader('Rellena todos los campos para obtener tu licencia')
 
