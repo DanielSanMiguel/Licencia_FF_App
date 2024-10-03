@@ -1,3 +1,3 @@
 [server]
-enableCORS = true  # Desactiva CORS
+enableCORS = false  # Desactiva CORS
 enableWebsocketCompression = false
