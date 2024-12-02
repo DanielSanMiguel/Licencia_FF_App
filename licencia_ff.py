@@ -156,13 +156,13 @@ with st.container():
                 # Realizar la solicitud POST
                 try:
                     
-                    response = requests.post(url, data=data, headers=headers)
+                    #response = requests.post(url, data=data, headers=headers)
             
                     # Mostrar los resultados
                     st.subheader("Resultado de la solicitud:")
                     data_at = {"records": [{"fields": {
                         'Nombre':nombre, 'Club':club, 'Puesto':puesto, 'Email':email, 'Licencia': response.json()['newLicense']}}]}
-                    response_at = requests.post(url_at, json.dumps(data_at), headers=headers_at)
+                    #response_at = requests.post(url_at, json.dumps(data_at), headers=headers_at)
                     # Mostrar la respuesta en formato JSON si es posible
                     st.write('En breve se enviará un mail a la dirección que has facilitado con el número de licencia y las instrucciones, gracias.')
 
